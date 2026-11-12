@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Analysis Game</title>
+    <!-- Vinculación al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Music Analysis</h1>
+    <p class="subtitle">Select a topic to play</p>
+
+    <!-- MENU SCREEN -->
+    <div id="menu-screen">
+        <button class="topic-btn" data-topic="stress">Stress</button>
+        <button class="topic-btn" data-topic="concatenation">Concatenation</button>
+        <button class="topic-btn" data-topic="mainIdea">Main Idea</button>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game-screen">
+        <div class="game-header">
+            <h2 id="current-topic-title"></h2>
+            <button class="back-btn" id="back-btn">Menu</button>
+        </div>
+        
+        <div id="card-content">
+            <!-- Dynamic content loads here -->
+        </div>
+        
+        <div id="feedback"></div>
+        <button id="next-btn">Next Card</button>
+    </div>
+
+    <!-- Vinculación al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
