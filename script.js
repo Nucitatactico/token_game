@@ -6,7 +6,7 @@ const data = {
             sentence: "Do you see it clearer or are you deceived?",
             options: ["Do", "you", "see", "it", "clearer", "or", "are", "you", "deceived"],
             correct: ["deceived"],
-            videoUrl: "https://www.youtube.com/embed/L3wKzyIN1yk?start=39&end=50"
+            videoUrl: "https://www.youtube.com/embed/L3wKzyIN1yk?start=32&end=52"
         },
         {
             title: "Crazy - Gnarls Barkley",
@@ -27,7 +27,7 @@ const data = {
             sentence: "I'm in love with your body",
             options: ["I'm", "in", "love", "with", "your", "body"],
             correct: ["body"],
-            videoUrl: "https://www.youtube.com/embed/JGwWNGJdvx8?start=10&end=20"
+            videoUrl: "https://www.youtube.com/embed/JGwWNGJdvx8?start=55&end=75"
         }
     ],
     concatenation: [
@@ -39,7 +39,7 @@ const data = {
                 " friend<br>Can I give it up or give it away?<br>Now I thought about what I wanna say"
             ],
             answers: ["counted", "on", "you", "being", "a"],
-            videoUrl: "https://www.youtube.com/embed/a5uQMwRMHcs?start=89&end=102"
+            videoUrl: "https://www.youtube.com/embed/a5uQMwRMHcs?start=89&end=109"
         },
         {
             title: "Smells Like Teen Spirit - Nirvana",
@@ -49,7 +49,7 @@ const data = {
                 "<br>A mosquito, my libido, yeah<br>Hey, yey"
             ],
             answers: ["mulatto", "albino"],
-            videoUrl: "https://www.youtube.com/embed/hTWKbfoikeg?start=65&end=82"
+            videoUrl: "https://www.youtube.com/embed/hTWKbfoikeg?start=65&end=85"
         },
         {
             title: "Another One Bites the Dust - Queen",
@@ -59,7 +59,7 @@ const data = {
                 "<br>Ain't no sound but the sound of his feet<br>Machine guns ready to go"
             ],
             answers: ["the", "brim", "pulled", "down", "low"],
-            videoUrl: "https://www.youtube.com/embed/rY0WxgSXdEE?start=20&end=30"
+            videoUrl: "https://www.youtube.com/embed/rY0WxgSXdEE?start=15&end=35"
         },
         {
             title: "Viva La Vida - Coldplay",
@@ -69,7 +69,7 @@ const data = {
                 " the word"
             ],
             answers: ["I", "gave"],
-            videoUrl: "https://www.youtube.com/embed/dvgZkm1xWPE?start=10&end=20"
+            videoUrl: "https://www.youtube.com/embed/dvgZkm1xWPE?start=10&end=30"
         }
     ],
     mainIdea: [
@@ -80,7 +80,7 @@ const data = {
                 { text: "Even though they haven't lived through a complex global crisis, they deal every day with the fact that the world leads them to believe they are nothing, and that wears them down.", correct: true },
                 { text: "Their generation needs to find an external cause, such as a war or an economic crisis, in order to feel alive and give meaning to its existence.", correct: false }
             ],
-            videoUrl: "https://www.youtube.com/embed/chyRpj-971o?start=0&end=30"
+            videoUrl: "https://www.youtube.com/embed/chyRpj-971o"
         },
         {
             title: "La La Land Speech",
@@ -89,7 +89,7 @@ const data = {
                 { text: "Having had unfortunate experiences in the past led the girl to seek something else, which she found at school, but now she is tired of that world and wants nothing more to do with it.", correct: false },
                 { text: "She is tired of having to deal with unfortunate situations, it has worn her out, and now she simply doesn't know whether she wants to move forward or not all because of the fear stemming from her past, which frustrates the guy.", correct: true }
             ],
-            videoUrl: "https://www.youtube.com/embed/b65C_muXajk?start=0&end=30"
+            videoUrl: "https://www.youtube.com/embed/b65C_muXajk"
         },
         {
             title: "Jojo Rabbit Extract",
@@ -98,7 +98,7 @@ const data = {
                 { text: "The characters are discussing trivial school matters completely disconnected from the historical context of the war.", correct: false },
                 { text: "The scene focuses purely on a comedic misunderstanding between two friends about cooking recipes.", correct: false }
             ],
-            videoUrl: "https://www.youtube.com/embed/JSn28UMlIGI?start=0&end=30"
+            videoUrl: "https://www.youtube.com/embed/JSn28UMlIGI"
         },
         {
             title: "Dead Poets Society",
@@ -107,7 +107,7 @@ const data = {
                 { text: "The professor inspires his students to seize the day and think for themselves, breaking away from conventional conformity.", correct: true },
                 { text: "The students decide to drop out of school to pursue careers in professional acting.", correct: false }
             ],
-            videoUrl: "https://www.youtube.com/embed/wrkWq0FAZ40?start=10&end=25"
+            videoUrl: "https://www.youtube.com/embed/XtYRC00IoUs"
         }
     ]
 };
