@@ -357,3 +357,27 @@ h1 {
     color: #777 !important;
     transform: none !important;
 }
+/* --- VIDEO MÁS GRANDE --- */
+.video-container {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#video-wrapper {
+    width: 100%;
+}
+
+/* En pantallas pequeñas, ajusta el alto para que no se desborde */
+@media (max-width: 600px) {
+    #video-placeholder iframe,
+    #video-placeholder > div[style*="height:420px"] {
+        height: 260px !important;
+    }
+    .video-container {
+        min-height: 260px;
+        padding: 10px;
+    }
+}

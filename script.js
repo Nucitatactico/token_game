@@ -272,11 +272,21 @@ function drawRandomCard() {
 function setupVideoPlaceholder(url) {
     if (!videoPlaceholder) return;
 
+    // Si ya se agotaron las reproducciones de la tarjeta, no mostrar botón
+    if (videoPlaysLeft <= 0) {
+        videoPlaceholder.innerHTML = `
+            <div id="video-wrapper">
+                <p style="color: var(--dark-purple); font-weight: bold;">🎬 No plays left for this card</p>
+            </div>
+        `;
+        return;
+    }
+
     videoPlaceholder.innerHTML = `
         <div id="video-wrapper">
             <p style="color: var(--dark-purple); font-weight: bold; margin-bottom: 8px;">🎬 Multimedia Clip</p>
             <button id="play-media-btn" class="check-btn" style="padding: 8px 20px; font-size: 0.95rem;">▶ Play Video</button>
-            <span id="play-counter" style="display: block; margin-top: 6px; font-size: 0.85rem; font-weight: bold; color: var(--dark-blue);">Plays left: 2</span>
+            <span id="play-counter" style="display: block; margin-top: 6px; font-size: 0.85rem; font-weight: bold; color: var(--dark-blue);">Plays left: ${videoPlaysLeft}</span>
         </div>
     `;
 
@@ -284,16 +294,31 @@ function setupVideoPlaceholder(url) {
     const counterSpan = document.getElementById("play-counter");
 
     playBtn.addEventListener("click", () => {
-        if (videoPlaysLeft > 0) {
-            videoPlaysLeft--;
-            counterSpan.innerText = `Plays left: ${videoPlaysLeft}`;
+        if (videoPlaysLeft <= 0) return;
 
-            videoPlaceholder.innerHTML = `
-                <div style="position:relative; width:100%; height:200px;">
-                    <iframe src="${url}" width="100%" height="200px" style="border:none; border-radius:8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <span style="display: block; margin-top: 5px; font-size: 0.8rem; font-weight: bold;">Plays left: ${videoPlaysLeft}</span>
-            `;
+        videoPlaysLeft--;
+        counterSpan.innerText = `Plays left: ${videoPlaysLeft}`;
+
+        // Iframe grande (420px de alto, ancho completo)
+        videoPlaceholder.innerHTML = `
+            <div style="position:relative; width:100%; height:420px;">
+                <iframe src="${url}" width="100%" height="420px"
+                    style="border:none; border-radius:12px;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <span style="display:block; margin-top:8px; font-size:0.85rem; font-weight:bold; color: var(--dark-blue);">
+                Plays left: ${videoPlaysLeft}
+            </span>
+        `;
+
+        // Si ya no quedan reproducciones, dejamos el iframe pero sin botón para volver a mostrarlo
+        if (videoPlaysLeft <= 0) {
+            // Añadimos un aviso opcional debajo (sin botón)
+            const note = document.createElement("p");
+            note.style.cssText = "margin-top:8px; font-size:0.8rem; font-weight:bold; color: var(--error);";
+            note.innerText = "No more plays available for this card.";
+            videoPlaceholder.appendChild(note);
         }
     });
 }
