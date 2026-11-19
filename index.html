@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Analysis Game</title>
-    <!-- Vinculación al archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,16 +24,21 @@
             <h2 id="current-topic-title"></h2>
             <button class="back-btn" id="back-btn">Menu</button>
         </div>
-        
-        <div id="card-content">
-            <!-- Dynamic content loads here -->
+
+        <div id="video-placeholder" class="video-container">
+            <div id="video-wrapper">
+                <p style="color: var(--dark-purple); font-weight: bold; margin-bottom: 8px;">🎬 Multimedia Clip</p>
+                <button id="play-media-btn" class="check-btn" style="padding: 8px 20px; font-size: 0.95rem;">▶ Play Video</button>
+                <span id="play-counter" style="display: block; margin-top: 6px; font-size: 0.85rem; font-weight: bold; color: var(--dark-blue);">Plays left: 2</span>
+            </div>
         </div>
-        
+
+        <div id="card-content"></div>
+
         <div id="feedback"></div>
         <button id="next-btn">Next Card</button>
     </div>
 
-    <!-- Vinculación al archivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

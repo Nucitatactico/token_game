@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
 
@@ -77,6 +78,8 @@ h1 {
     padding: 30px;
     box-shadow: 0 10px 25px rgba(43, 45, 66, 0.15);
     position: relative;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .game-header {
@@ -92,6 +95,7 @@ h1 {
     margin: 0;
     color: var(--dark-purple);
     text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 .back-btn {
@@ -107,6 +111,17 @@ h1 {
 
 .back-btn:hover {
     background-color: var(--dark-purple);
+}
+
+/* VIDEO PLACEHOLDER */
+.video-container {
+    background-color: #ffffff;
+    border: 2px dashed var(--light-purple);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
 }
 
 /* CONTENT AREAS */
@@ -277,4 +292,68 @@ h1 {
     
 #next-btn:hover { 
     background-color: var(--dark-blue); 
+}
+
+.game-hud div {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- HUD NUEVO --- */
+.game-hud {
+    margin-bottom: 15px;
+}
+
+.hud-row {
+    display: flex;
+    justify-content: space-around;
+    background: var(--light-purple);
+    color: var(--cream);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.hud-player {
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.hud-player-dead {
+    opacity: 0.35;
+    filter: grayscale(100%);
+    text-decoration: line-through;
+}
+
+.hud-tokens {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: var(--dark-purple);
+}
+
+.hud-turn {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-top: 6px;
+    color: var(--dark-blue);
+}
+
+/* --- BOTONES DE TEMA AGOTADOS --- */
+.topic-btn.exhausted,
+.topic-btn:disabled {
+    background-color: #cfcfcf !important;
+    color: #777 !important;
+    border-color: #999 !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none !important;
+}
+
+.topic-btn.exhausted:hover,
+.topic-btn:disabled:hover {
+    background-color: #cfcfcf !important;
+    color: #777 !important;
+    transform: none !important;
 }
